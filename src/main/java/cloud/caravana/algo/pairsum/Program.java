@@ -1,4 +1,4 @@
-package cloud.caravana.algo.draft;
+package cloud.caravana.algo.pairsum;
 
 import java.util.Arrays;
 import java.util.HashSet;

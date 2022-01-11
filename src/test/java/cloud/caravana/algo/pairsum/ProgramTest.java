@@ -1,10 +1,12 @@
-package cloud.caravana.algo.draft;
+package cloud.caravana.algo.pairsum;
 
+import static cloud.caravana.algo.pairsum.Program.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import static cloud.caravana.algo.draft.Program.*;
+
+import cloud.caravana.algo.pairsum.Program;
 import io.quarkus.test.junit.QuarkusTest;
 
 @QuarkusTest
