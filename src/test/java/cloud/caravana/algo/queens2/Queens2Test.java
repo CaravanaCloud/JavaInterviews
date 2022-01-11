@@ -1,6 +1,5 @@
 package cloud.caravana.algo.queens2;
 
-import java.util.List;
 import static java.util.List.of;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
