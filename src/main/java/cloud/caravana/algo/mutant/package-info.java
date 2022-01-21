@@ -1,6 +1,7 @@
 package cloud.caravana.algo.mutant;
 
 // source: Teste do Mercado Livre (https://github.com/lucasnscr/Mutants-Teste)
+
 /**
  * DNA Mutante
  * 
@@ -17,5 +18,6 @@ package cloud.caravana.algo.mutant;
  * 
  * Seria um DNA mutante com uma cadeia de 4 "A"s consecutivos em diagonal.
  * 
+ * Java:  public static boolean isMutant(String[] dna)
  * 
  */

@@ -5,16 +5,20 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 public class Queens2 {
-    private static String encode(int a, int b) {
-        // Arrays.hasCode(new int[]{a, b})
-        // a * 31 + b
-        // (a+","+b).hashCode();
-        // int[]{a, b}.hashCode();
-        return ""+a+","+b;
+    private static List<Integer> encode(int a, int b) {
+        //? new int[]{a, b};
+        //? Arrays.hasCode(new int[]{a, b});
+        //? a * 31 + b;
+        //? (a+","+b).hashCode();
+        //? int[]{a, b}.hashCode();
+        //! (a+","+b);
+        //!! List.of(a,b);
+        return List.of(a,b);
     }
 
     public static int queensAttack(int n, int k, int r_q, int c_q, List<List<Integer>> obstacles) {
-        var blocks = obstacles.stream()
+        var blocks = (Set<List<Integer>/*Pair*/>) 
+            obstacles.stream()
                 .map(sq -> encode(sq.get(0), sq.get(1)))
                 .collect(Collectors.toSet());
 
@@ -29,7 +33,7 @@ public class Queens2 {
         return l + r + u + d + ul + ur + dl + dr;
     }
 
-    private static int countDownRight(int n, int r_q, int c_q, Set<String> blocks) {
+    private static int countDownRight(int n, int r_q, int c_q, Set<List<Integer>> blocks) {
         var count = 0;
         var progress = true;
         while (progress) {
@@ -44,7 +48,7 @@ public class Queens2 {
         return count;
     }
 
-    private static int countDownLeft(int n, int r_q, int c_q, Set<String> blocks) {
+    private static int countDownLeft(int n, int r_q, int c_q, Set<List<Integer>> blocks) {
         var count = 0;
         var progress = true;
         while (progress) {
@@ -59,7 +63,7 @@ public class Queens2 {
         return count;
     }
 
-    private static int countUpRight(int n, int r_q, int c_q, Set<String> blocks) {
+    private static int countUpRight(int n, int r_q, int c_q, Set<List<Integer>> blocks) {
         var count = 0;
         var progress = true;
         while (progress) {
@@ -74,7 +78,7 @@ public class Queens2 {
         return count;
     }
 
-    private static int countUpLeft(int r_q, int c_q, Set<String> blocks) {
+    private static int countUpLeft(int r_q, int c_q, Set<List<Integer>> blocks) {
         var count = 0;
         var progress = true;
         while (progress) {
@@ -89,7 +93,7 @@ public class Queens2 {
         return count;
     }
 
-    private static int countDown(int n, int r_q, int c_q, Set<String> blocks) {
+    private static int countDown(int n, int r_q, int c_q, Set<List<Integer>> blocks) {
         var count = 0;
         var progress = true;
         while (progress) {
@@ -103,7 +107,7 @@ public class Queens2 {
         return count;
     }
 
-    private static int countUp(int r_q, int c_q, Set<String> blocks) {
+    private static int countUp(int r_q, int c_q, Set<List<Integer>> blocks) {
         var count = 0;
         var progress = true;
         while (progress) {
@@ -117,7 +121,7 @@ public class Queens2 {
         return count;
     }
 
-    private static int countRight(int n, int r_q, int c_q, Set<String> blocks) {
+    private static int countRight(int n, int r_q, int c_q, Set<List<Integer>> blocks) {
         var count = 0;
         var progress = true;
         while (progress) {
@@ -131,7 +135,7 @@ public class Queens2 {
         return count;
     }
 
-    private static int countLeft(int r_q, int c_q, Set<String> blocks) {
+    private static int countLeft(int r_q, int c_q, Set<List<Integer>> blocks) {
         var count = 0;
         var progress = true;
         while (progress) {
