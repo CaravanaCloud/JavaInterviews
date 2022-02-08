@@ -17,7 +17,7 @@ jobs:
 
       - run: java -version
 
-      - run: ./mvnw -B clean test jacoco:report
+      - run: ./mvnw -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn clean test jacoco:report
 
       - name: Generate JaCoCo Badge
         uses: cicirello/jacoco-badge-generator@v2
