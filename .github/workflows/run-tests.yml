@@ -17,6 +17,19 @@ jobs:
 
       - run: java -version
 
+  - name: Cache local Maven repository
+      uses: actions/cache@v2
+      with:
+        path: ~/.m2/repository
+        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+        restore-keys: |
+          ${{ runner.os }}-maven-
+
+      - name: Cache docker layers
+        uses: satackey/action-docker-layer-caching@v0.0.11
+        # Ignore the failure of a step and avoid terminating the job.
+        continue-on-error: true
+
       - name: maven
         run: ./mvnw $SILENT clean test jacoco:report
         env:
@@ -28,10 +41,3 @@ jobs:
         with:
           generate-branches-badge: false
 
-      - name: Cache local Maven repository
-        uses: actions/cache@v2
-        with:
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-maven-
