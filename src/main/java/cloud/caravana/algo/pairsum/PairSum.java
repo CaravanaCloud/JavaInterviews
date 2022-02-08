@@ -1,9 +1,13 @@
 package cloud.caravana.algo.pairsum;
 
+import static cloud.caravana.Util.*;
+
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.function.BiFunction;
+import java.util.stream.IntStream;
 
-public class Program {
+public class PairSum {
     // cpu/tempo = O(n log n) + O(n) = O(n log n) // mem/espaco = O(1)
     public static int[] tunnelTwoNumberSum(int[] array, int targetSum) {
         if (array == null) return null;
@@ -53,4 +57,22 @@ public class Program {
         return null;
     }
 
+
+    public static Integer[] iterPairSum(Integer[] xs, Integer target) {
+        var _xs = integersToInts(xs);
+        var result = iterTwoNumberSum(_xs, target);
+        return intsToIntegers(result);
+    }
+
+    public static Integer[] memoPairSum(Integer[] xs, Integer target) {
+        var _xs = integersToInts(xs);
+        var result = memoTwoNumberSum(_xs, target);
+        return intsToIntegers(result);
+    }
+
+    public static Integer[] tunnelPairSum(Integer[] xs, Integer target) {
+        var _xs = integersToInts(xs);
+        var result = tunnelTwoNumberSum(_xs, target);
+        return intsToIntegers(result);
+    }
 }

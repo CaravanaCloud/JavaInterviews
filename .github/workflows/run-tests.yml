@@ -1,0 +1,12 @@
+name: run-tests
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+
+      - name: checkout
+        uses: "actions/checkout@v2"
+
+      - run: find .

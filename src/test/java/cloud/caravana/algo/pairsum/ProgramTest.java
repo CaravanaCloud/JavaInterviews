@@ -1,6 +1,6 @@
 package cloud.caravana.algo.pairsum;
 
-import static cloud.caravana.algo.pairsum.Program.*;
+import static cloud.caravana.algo.pairsum.PairSum.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeAll;
@@ -14,7 +14,7 @@ public class ProgramTest {
     void caseNull(){
         int[] array = null;
         int targetSum = 0;
-        var result = Program.iterTwoNumberSum(array, targetSum);
+        var result = PairSum.iterTwoNumberSum(array, targetSum);
         assertNull(result);
     }
 
@@ -34,7 +34,7 @@ public class ProgramTest {
 
     @Test
     void caseIterA(){
-        var result = Program.iterTwoNumberSum(arrayA, targetA);
+        var result = PairSum.iterTwoNumberSum(arrayA, targetA);
         var r0 = result[0];
         var r1 = result[1];
         assertEquals(10, r0 + r1);

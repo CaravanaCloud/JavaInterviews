@@ -75,4 +75,28 @@ public class Util {
             throw new RuntimeException(ex);
         }
     }
+
+    public static int[] commasToInts(String xs) {
+        return Arrays.stream(xs.split(","))
+                .map(String::trim)
+                .mapToInt(Integer::parseInt)
+                .toArray();
+    }
+
+
+
+    public static Integer[] intsToIntegers(int[] xs) {
+        return IntStream.of( xs ).boxed().toArray( Integer[]::new );
+    }
+
+    public static Integer[] commasToIntegers(String xs) {
+        return intsToIntegers(commasToInts(xs));
+    }
+
+    public static final int[] integersToInts(Integer[] xs){
+        return Arrays.stream(xs)
+                .mapToInt(Integer::intValue)
+                .toArray();
+    }
+
 }

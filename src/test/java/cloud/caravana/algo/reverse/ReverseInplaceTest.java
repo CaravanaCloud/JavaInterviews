@@ -10,6 +10,7 @@ import static cloud.caravana.algo.reverse.ReverseInplace.*;
 @QuarkusTest
 public class ReverseInplaceTest {
     static final String longStr = " ".repeat(999_999);
+    
     @Test
     public void testOdd() {
         assertEquals("xuxu", reverse("uxux"));
