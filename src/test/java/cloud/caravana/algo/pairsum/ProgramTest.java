@@ -21,7 +21,7 @@ public class ProgramTest {
     static int[] arrayA = new int[]{3, 5, -4, 8, 11, 1, -1, 6};
     static int targetA = 10;
 
-    static int[] arrayXL = new int[999_999_999];
+    static int[] arrayXL = new int[999_999];
     static int targetXL = 1;
 
     @BeforeAll
