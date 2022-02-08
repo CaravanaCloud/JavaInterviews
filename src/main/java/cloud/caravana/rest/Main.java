@@ -1,4 +1,4 @@
-package cloud.caravana.rs;
+package cloud.caravana.rest;
 
 import java.util.logging.Logger;
 

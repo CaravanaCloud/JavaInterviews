@@ -1,8 +1,7 @@
-package cloud.caravana.rs.algo;
+package cloud.caravana.rest.pairsum;
 
 import cloud.caravana.algo.pairsum.PairSum;
 
-import static cloud.caravana.algo.pairsum.PairSum.*;
 import static cloud.caravana.Util.*;
 import java.util.Arrays;
 import java.util.function.BiFunction;

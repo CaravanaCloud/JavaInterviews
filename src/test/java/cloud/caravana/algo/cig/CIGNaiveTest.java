@@ -53,7 +53,7 @@ class CIGNaiveTest {
     @Test
     ///@Timeout(3)
     public void testCase19(){
-        var input19 = parseInput("cig/input19.txt");
+        var input19 = parseCIGInput("cig/input19.txt");
         var result = CIGNaiveAlgo.componentsInGraph(input19);
         assertIterableEquals(of(2,866), result);
     }

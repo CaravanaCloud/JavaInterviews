@@ -1,4 +1,4 @@
-package cloud.caravana.rs.hello;
+package cloud.caravana.rest.hello;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

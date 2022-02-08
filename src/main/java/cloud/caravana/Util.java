@@ -20,29 +20,12 @@ public class Util {
         StringBuffer sb = new StringBuffer();
         for (int i = 0; i < array.length; i++) {
             sb.append(array[i]);
-            sb.append("\n");            
+            sb.append("\n");
         }
         return sb.toString();
     }
 
-    public static int intFromLine(String input, int lineNumber) {
-        var text = linesToArray(input)[lineNumber];
-        var result = Integer.parseInt(text.trim());
-        return result;
-    }
-
-    public static int[] intArrayStartingLine(String input, int lineNumber) {
-        var lines = Arrays.asList(linesToArray(input));
-        var resultList = lines.subList(lineNumber, lines.size());
-        var result = new int[resultList.size()];
-        for (int i = 0; i < resultList.size(); i++) {
-            var text = resultList.get(i).trim();
-            result[i] = Integer.parseInt(text);
-        }
-        return result;
-    }
- 
-    public static final List<List<Integer>> parseInput(String file) {
+    public static final List<List<Integer>> parseCIGInput(String file) {
         try {
             ClassLoader cl = Thread.currentThread().getContextClassLoader();
             // The class loader that loaded the class
@@ -53,7 +36,7 @@ public class Util {
                 throw new IllegalArgumentException("file not found! " + file);
             }
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(in));
- 
+
             int n = Integer.parseInt(bufferedReader.readLine().trim());
 
             List<List<Integer>> gb = new ArrayList<>();
@@ -84,16 +67,15 @@ public class Util {
     }
 
 
-
     public static Integer[] intsToIntegers(int[] xs) {
-        return IntStream.of( xs ).boxed().toArray( Integer[]::new );
+        return IntStream.of(xs).boxed().toArray(Integer[]::new);
     }
 
     public static Integer[] commasToIntegers(String xs) {
         return intsToIntegers(commasToInts(xs));
     }
 
-    public static final int[] integersToInts(Integer[] xs){
+    public static final int[] integersToInts(Integer[] xs) {
         return Arrays.stream(xs)
                 .mapToInt(Integer::intValue)
                 .toArray();

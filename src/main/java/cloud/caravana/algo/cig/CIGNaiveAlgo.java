@@ -56,7 +56,7 @@ class CIGNaiveAlgo {
 
     public static void main(String[] args) throws IOException {
         String file = "input19.txt";
-        var gb = Util.parseInput(file);
+        var gb = Util.parseCIGInput(file);
         List<Integer> result = CIGPerfAlgo.componentsInGraph(gb);
         System.out.println(result);
     }

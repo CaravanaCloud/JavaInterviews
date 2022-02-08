@@ -17,10 +17,10 @@ class CIGPerfTest {
 
     @BeforeAll
     public static void setup(){
-        input07 = parseInput("cig/input07.txt");
-        input10 = parseInput("cig/input10.txt");
-        input19 = parseInput("cig/input19.txt");
-        input30 = parseInput("cig/input30.txt");
+        input07 = parseCIGInput("cig/input07.txt");
+        input10 = parseCIGInput("cig/input10.txt");
+        input19 = parseCIGInput("cig/input19.txt");
+        input30 = parseCIGInput("cig/input30.txt");
     }
     
     @Test

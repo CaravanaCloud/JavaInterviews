@@ -1,4 +1,4 @@
-package cloud.caravana.rs.algo;
+package cloud.caravana.rest.pairsum;
 
 import static cloud.caravana.algo.pairsum.PairSum.*;
 import static cloud.caravana.Util.*;
