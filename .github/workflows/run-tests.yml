@@ -8,5 +8,11 @@ jobs:
 
       - name: checkout
         uses: "actions/checkout@v2"
+      - name: graalvm
+        uses: DeLaGuardo/setup-graalvm@5.0
+        with:
+          graalvm: '22.0.0.3'
+          java: 'java17'
+          arch: 'amd64'
 
-      - run: find .
+      - run: java -version
