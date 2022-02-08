@@ -20,7 +20,7 @@ jobs:
       - name: maven
         run: ./mvnw $SILENT clean test jacoco:report
         env:
-          JAVA_OPTS: "-Xmx2048m -Xms2048m"
+          JAVA_OPTS: "-Xmx6g -Xms6g"
           SILENT: "-B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
 
       - name: Generate JaCoCo Badge
