@@ -17,5 +17,9 @@ jobs:
 
       - run: java -version
 
-      - run: ./mvnw clean test jacoco:report
+      - run: ./mvnw -B clean test jacoco:report
 
+      - name: Generate JaCoCo Badge
+        uses: cicirello/jacoco-badge-generator@v2
+        with:
+          generate-branches-badge: false
