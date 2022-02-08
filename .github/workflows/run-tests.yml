@@ -16,3 +16,6 @@ jobs:
           arch: 'amd64'
 
       - run: java -version
+
+      - run: ./mvnw clean test jacoco:report
+
