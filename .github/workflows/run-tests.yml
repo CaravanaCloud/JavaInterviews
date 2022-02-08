@@ -41,3 +41,8 @@ jobs:
         with:
           generate-branches-badge: false
 
+      - name: Archive jacoco reports
+        uses: actions/upload-artifact@v2
+        with:
+          name: code-coverage-report
+          path: target/site/**
