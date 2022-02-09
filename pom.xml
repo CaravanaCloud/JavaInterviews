@@ -63,6 +63,7 @@
     </dependency>
   </dependencies>
   <build>
+    <defaultGoal>clean quarkus:dev</defaultGoal>
     <plugins>
       <plugin>
         <groupId>${quarkus.platform.group-id}</groupId>
