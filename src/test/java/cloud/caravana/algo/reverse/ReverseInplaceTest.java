@@ -33,6 +33,6 @@ public class ReverseInplaceTest {
 
     @Test
     public void testEmpty() {
-        assertEquals(null, reverse(null));
+        assertEquals("", reverse(""));
     }
 }
