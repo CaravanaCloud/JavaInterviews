@@ -16,9 +16,14 @@ public class ReverseInplace {
     private static void reverseArray(char[] arr) {
         for (int i = 0; i < arr.length/2; i++) {
             var other = arr.length - 1 - i;
+            // Swap using XOR
             arr[i] ^= arr[other];
             arr[other] ^= arr[i];
             arr[i] ^= arr[other];
+            // Alternative using a temporary variable
+            // var temp = arr[i];
+            // arr[i] = arr[other];
+            // arr[other] = temp;
         }
     }
 }
