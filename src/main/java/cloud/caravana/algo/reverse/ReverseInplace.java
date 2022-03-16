@@ -2,6 +2,7 @@ package cloud.caravana.algo.reverse;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.Objects;
 
 public class ReverseInplace {
 
@@ -15,9 +16,9 @@ public class ReverseInplace {
     private static void reverseArray(char[] arr) {
         for (int i = 0; i < arr.length/2; i++) {
             var other = arr.length - 1 - i;
-            var temp = arr[i];
-            arr[i] = arr[other];
-            arr[other] = temp;
+            arr[i] ^= arr[other];
+            arr[other] ^= arr[i];
+            arr[i] ^= arr[other];
         }
     }
 }
