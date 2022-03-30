@@ -16,7 +16,7 @@ class CIGNaiveTest {
         var b = List.of(1,6);
         var c = List.of(2,4);
         var bg = List.of(a,b,c);
-        var result = CIGNaiveAlgo.componentsInGraph(bg);
+        var result = CIGMap.componentsInGraph(bg);
         assertIterableEquals(List.of(2,3), result);
     }
 
@@ -28,7 +28,7 @@ class CIGNaiveTest {
                 List.of(3,8),
                 List.of(4,9),
                 List.of(2,6));
-        var result = CIGNaiveAlgo.componentsInGraph(bg);
+        var result = CIGMap.componentsInGraph(bg);
         assertIterableEquals(List.of(2,4), result);
     }
 
@@ -46,7 +46,7 @@ class CIGNaiveTest {
                 of(8, 13),
                 of(2, 15),
                 of(5, 20));
-        var result = CIGNaiveAlgo.componentsInGraph(bg);
+        var result = CIGMap.componentsInGraph(bg);
         assertIterableEquals(of(11,11), result);
     }
 
@@ -54,7 +54,7 @@ class CIGNaiveTest {
     ///@Timeout(3)
     public void testCase19(){
         var input19 = parseCIGInput("cig/input19.txt");
-        var result = CIGNaiveAlgo.componentsInGraph(input19);
+        var result = CIGMap.componentsInGraph(input19);
         assertIterableEquals(of(2,866), result);
     }
 

@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Timeout;
 
 import java.util.List;
 
-import static cloud.caravana.algo.cig.CIGPerfAlgo.*;
+import static cloud.caravana.algo.cig.CIGTree.*;
 import static cloud.caravana.Util.*;
 import static java.util.List.of;
 import static org.junit.jupiter.api.Assertions.*;

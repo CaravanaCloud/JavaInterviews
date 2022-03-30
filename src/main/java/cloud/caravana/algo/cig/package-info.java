@@ -14,7 +14,11 @@ package cloud.caravana.algo.cig;
  * Note: Single nodes should not be considered in the answer.
  * 
  * Sample Input
- *  bg = [[1, 6],[2, 7], [3, 8], [4,9], [2, 6]]
+ *  bg = [[1, 6],     1,2 -> 6
+ *        [2, 7],       2 -> 7
+ *        [3, 8],       3 -> 8
+ *        [4,9],        4 -> 9
+ *        [2, 6]]
  * 
  * Sample Output
  *  [2, 4]

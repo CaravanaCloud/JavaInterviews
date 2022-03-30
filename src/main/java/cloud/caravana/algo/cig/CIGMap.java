@@ -5,7 +5,7 @@ import java.util.*;
 
 import cloud.caravana.Util;
 
-class CIGNaiveAlgo {
+class CIGMap {
     /* Notes
      * - undirected graph
      * - there is at least one connected component (size 2)
@@ -57,7 +57,7 @@ class CIGNaiveAlgo {
     public static void main(String[] args) throws IOException {
         String file = "input19.txt";
         var gb = Util.parseCIGInput(file);
-        List<Integer> result = CIGPerfAlgo.componentsInGraph(gb);
+        List<Integer> result = CIGTree.componentsInGraph(gb);
         System.out.println(result);
     }
 

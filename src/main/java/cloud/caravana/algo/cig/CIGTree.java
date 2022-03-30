@@ -2,7 +2,7 @@ package cloud.caravana.algo.cig;
 
 import java.util.*;
 
-public class CIGPerfAlgo {
+public class CIGTree {
     public static List<Integer> componentsInGraph(List<List<Integer>> edges) {
         var parents = new HashMap<Integer /*Node*/, Integer /*Component*/>();
         var sizes = new HashMap<Integer /*Component*/, Integer/*Size*/>();
