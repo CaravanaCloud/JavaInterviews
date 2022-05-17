@@ -58,3 +58,8 @@ Easily start your RESTful Web Services
 ## JaCoCo Coverage
 ![Coverage](.github/badges/jacoco.svg)
 
+# TODO
+
+- match parentesis/balance string
+- sliding window / sub array min product
+- 
