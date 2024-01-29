@@ -2,8 +2,14 @@ package cloud.caravana.algo.pairsum;
 
 import static cloud.caravana.Util.*;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.HashSet;
+import java.util.Random;
 import java.util.function.BiFunction;
 import java.util.stream.IntStream;
 
@@ -74,5 +80,28 @@ public class PairSum {
         var _xs = integersToInts(xs);
         var result = tunnelTwoNumberSum(_xs, target);
         return intsToIntegers(result);
+    }
+
+    static final DateTimeFormatter df = DateTimeFormatter.ofPattern("HH:mm:ss.SSS");
+    public static void main(String[] args) {
+        var xs = new Random()
+        .ints(50_000_000, 0, 100000)
+            .boxed()
+            .toArray(Integer[]::new);
+        var target = 1337;
+        timestamp("Initial: ");        
+        var result = iterPairSum(xs, target);
+        System.out.println(Arrays.toString(result));
+        timestamp("Iterative: ");
+        result = memoPairSum(xs, target);
+        System.out.println(Arrays.toString(result));
+        timestamp("Memoized: ");
+        result = tunnelPairSum(xs, target);
+        System.out.println(Arrays.toString(result));
+        timestamp("Tunnel:");
+    }
+
+    private static void timestamp(String msg) {
+        System.out.println(msg + LocalDateTime.now().format(df));
     }
 }
