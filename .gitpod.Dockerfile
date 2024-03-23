@@ -11,7 +11,7 @@ ARG JAVA_SDK="22-graalce"
 RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh \
     && sdk install java $JAVA_SDK \
     && sdk default java $JAVA_SDK \
-    && sdk install maven
+    && sdk install maven \
     && sdk install quarkus"
 
 RUN bash -c "curl 'https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip' -o 'awscliv2.zip' && unzip awscliv2.zip && sudo ./aws/install"
